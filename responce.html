@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="topicBox">Registered Successfully</div>
+        <h3 class="LableOne"> Thank you for registering with Ebill Application</h3><hr>
+        <div class="res_card">
+            <p>
+                Customer ID: <span id="C-No"></span>
+            </p>
+            <p>
+                Customer Name: <span id="C-Name"></span>
+            </p>
+            <p>
+                Mobile Number: <span id="mob-No"></span>
+            </p>
+        </div>
+        <div class="btn_set">
+        
+       
+            <button type="button" class="submit_btn">
+                Back to Login
+            </button>
+
+            <script>
+
+
+        const username = localStorage.getItem('username'); // Get value from localStorage
+        document.getElementById('displayName').textContent = username; 
+
+
+                const C_no = localStorage.getItem('coust-Id');
+                const C_name = localStorage.getItem('coust-Name');
+                const mob = localStorage.getItem('mobile');
+
+                document.getElementById('C-No').textContent = C_no;
+                document.getElementById('C-Name').textContent = C_name;
+                document.getElementById('mob-No').textContent = mob;
+            </script>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>
+
+

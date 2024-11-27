@@ -3,72 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EB Billing</title>
     <link rel="stylesheet" href="style.css">
+    
+
 </head>
 <body>
     <div class="container">
-        <div class="topicBox"> Register New User</div>
-    
-    <form >
-        <h3 class="LabelOne">Consumer Details</h3><hr>
-        <div class="form_block">
-            <div class="input_outter"> 
-                <label for="Consumer_No">*Consumer Number: </label>
-                <input type="number" class="input_field" id="C_no" placeholder="Enter Consumer Number">
+        <div class="topicBox">Register New User</div>
+        <form>
+            <h3 class="LableOne"> Consumer Details:</h3><hr>
+            <div class ="form_block">
+                <div class="input_outter">
+                    <label for ="Consumer_No"><span style="color: red;">*</span>Consumer Number:</label>
+                    <input type="number"
+                     class="input_field" 
+                     id="C_no" 
+                     min=1
+                     max=9999999999999999
+                     placeholder="Enter Consumer Number"
+                     required>
+                </div>
+                <div class="input_outter">
+                    <label for ="Bill_No"><span style="color: red;">*</span>Bill Number:</label>
+                    <input type="number"
+                     class="input_field"
+                      id="B_no"
+                      min = 11111
+                      max= 99999
+                      placeholder="use 5 digits"
+                      required>
+                </div>
             </div>
-    
-            <div class="input_outter"> 
-                <label for="Bill_No">*Bill Number: </label>
-                <input type="number" class="input_field" id="B_no" placeholder="use 5 digits">
-            </div>
-        </div>
 
-        <h3 class="LabelOne">User Details</h3><hr>
-        <div class="form_block">
-            <div class="input_outter"> 
-                <label for="Consumer_No">Title: </label>
-                <select name="input_field" class="input_field" id="title">
-                    <option value="Mr">Mr</option>
-                    <option value="Ms">Ms</option>
-                    <option value="Dr">Dr</option>
-                    <option value="Mrs">Mrs</option>
-                  </select>
+            <h3 class="LableOne"> User Details:</h3><hr>
+            <div class ="form_block">
+                <div class="input_outter">
+                    <label for ="title">Title:</label>
+                    <select name="input_field" class="input_field" id="title">
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Dr">Dr</option>
+                    </select>
+                </div>
+                <div class="input_outter">
+                    <label for ="Cust_Name"><span style="color: red;">*</span>Name:</label>
+                    <input type="text" class="input_field" id="CustName" placeholder="Enter your Name" required>
+                </div>
             </div>
-    
-            <div class="input_outter"> 
-                <label for="Bill_No">*Bill Number: </label>
-                <input type="number" class="input_field" id="B_no" placeholder="use 5 digits">
-            </div>
-        </div>
-        <div class="form_block">
-            <div class="input_outter"> 
-                <label for="email">Email: </label>
-                <input type="email" class="input_field" id="email" placeholder="Enter Email">
-            </div>  
-            <div class="input_outter"> 
-                <label for="Bill_No">*Mobile No: </label>
-                <input type="number" class="input_field" id="mobile_no" placeholder="use 10 digits">
-            </div>
-        </div>
 
-        <h3 class="LabelOne">Login Details</h3><hr>
-        <div class="form_block">
-            <div class="input_outter"> 
-                <label for="user_id">*User Id: </label>
-                <input type="text" class="input_field" id="user_id" placeholder="Enter User Id">
-            </div>
-    
-            <div class="input_outter"> 
-                <label for="Bill_No">*Password: </label>
-                <input type="number" class="input_field" id="B_no" placeholder="use 5 digits">
-                <label for="Bill_No">*Confirm Password: </label>
-                <input type="number" class="input_field" id="B_no" placeholder="use 5 digits">
-            </div>
-        </div>
+            <div class ="form_block">
+                <div class="input_outter">
+                    <label for ="email"><span style="color: red;">*</span>Email:</label>
+                    <input type="email" class="input_field" id="email" placeholder="Enter your EmailId" required>
+                </div>
 
-      
-    </form>
-</div>
+                <div class="input_outterMobile">
+                    <label for ="Mob_no">
+                        <span style="color: red;">*</span>
+                        Mobile Number:</label>
+                    <div class="input_outter2">
+                        <select name="input_field" class="input_field" id="Mob_code">
+                            <option value="91">0091 - India</option>
+                            <option value="93">0093 - Afghanistan</option>
+                            <option value="86">0086 - China</option>
+                            <option value="98">0098 - Iran</option>
+                            <option value="1">0001 - United State </option>
+                        </select>
+                        <input type="number" 
+                        class="input_field" 
+                        id="Mobile_no"
+                        min = 1111111111
+                        max = 9999999999
+                         placeholder="use 10 digits"
+                         required>
+                    </div>
+                    </div>
+                    
+                   
+                    
+                
+            </div>
+
+            <h3 class="LableOne"> Login Details:</h3><hr>
+            <div class ="form_block">
+                <div class="input_outter">
+                    <label for ="user_id"><span style="color: red;">*</span>User Id:</label>
+                    <input type="text" class="input_field" id="user_id" placeholder="Entre user Id" required>
+                </div>
+                <div class="input_outter3">
+                    <div >
+                        <label for ="password"><span style="color: red;">*</span>Password:</label>
+                        <input type="text" class="input_field" id="password" placeholder="password" required>
+                    </div>
+                    <div>
+                            
+                        <label for ="conf_password"><span style="color: red;">*</span>confirm Password:</label>
+                        <input type="text" class="input_field" id="con_password" placeholder="password" required>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            
+            <div class="btn_set">
+                <button type="button" class="Reset_btn">
+                    Reset
+                </button>
+                &nbsp;&nbsp;  
+                <button type="submit"
+                 class="submit_btn"
+                 
+                 >
+                    Register
+                </button>
+            </div>
+
+
+        </form>
+
+    </div>
+    <script>
+
+            const form = document.getElementById('form');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const coust_Id = document.getElementById('C_no').value;
+                const coust_Name = document.getElementById('CustName').value;
+                const mob = document.getElementById('Mobile_no').value;
+
+                localStorage.setItem('coust-Id', coust_Id);
+                localStorage.setItem('coust-Name', coust_Name);
+                localStorage.setItem('mobile', mob);
+
+                window.location.href = 'responce.html';
+                
+            });
+    </script>
 </body>
 </html>
+
+
+
+
